@@ -1,4 +1,4 @@
-#include <cs50.h>
+// #include <cs50.h>
 #include <stdio.h>
 
 int main(void)
@@ -6,7 +6,13 @@ int main(void)
     int height, row, column, space;
     do
     {
-        height = get_int ("Enter height: ");
+				printf("Enter Height: ");
+				scanf("%d", &height);
+				if (height > 8) {
+					printf("Please enter height less than 8.\n");
+				} else if (height < 1) {
+					printf("Please enter height more than 1.\n");
+				}
     }
     while (height < 1 || height > 8);
 
